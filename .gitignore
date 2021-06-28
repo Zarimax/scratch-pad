@@ -127,3 +127,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+scratch-pad.exe
+scratch-pad.ilk
+scratch-pad.obj
+scratch-pad.pdb
+vc140.pdb
