@@ -66,5 +66,4 @@ assert change_best(12) == 3
 assert change_best(468) == 11
 assert change_best(123456) == 254
 
-print(change_best(1231122313112))
 print("Tests Completed Successfully!")
