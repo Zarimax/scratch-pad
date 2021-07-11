@@ -5,7 +5,7 @@ from random import randrange
 # works by calling random.randrange in a for loop inside of a list comprehension
 def roll_dice(num_dice, num_sides):
     # get a random number from 1 to num_sides
-    # do this num_dict times, (range 0 to num_dice)
+    # do this num_dice times, (range 0 to num_dice)
     result = [randrange(1, num_sides + 1) for _ in range(num_dice)]
     return result
 
