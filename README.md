@@ -1,6 +1,12 @@
 # scratch-pad
 Links for learning
 
+## Reference Books
+https://teachyourselfcs.com/
+
+## Python References
+https://docs.python.org/3/reference/compound_stmts.html
+
 ## Levels of Abstraction
 https://medium.com/@twitu/a-dive-down-the-levels-of-abstraction-227c96c7933c
 
