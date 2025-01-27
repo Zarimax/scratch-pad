@@ -3,9 +3,9 @@ import csv
 import os
 
 # File paths
-stops_file = r"C:\Users\Black Beast\Desktop\gtfs-nl\stops.txt"
-stop_times_file = r"C:\Users\Black Beast\Desktop\gtfs-nl\stop_times.txt"
-db_file = r"C:\Users\Black Beast\Desktop\transit_data.db"
+stops_file = r"C:\Users\Black Beast\Desktop\bus-tracker\gtfs-nl\stops.txt"
+stop_times_file = r"C:\Users\Black Beast\Desktop\bus-tracker\gtfs-nl\stop_times.txt"
+db_file = r"C:\Users\Black Beast\Desktop\bus-tracker\transit_data.db"
 
 # Create or connect to the SQLite database on disk
 conn = sqlite3.connect(db_file)

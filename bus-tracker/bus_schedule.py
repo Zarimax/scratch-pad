@@ -100,7 +100,7 @@ vehicle {
 }
 """
 
-db_file = r"C:\Users\Black Beast\Desktop\transit_data.db"
+db_file = r"C:\Users\Black Beast\Desktop\bus-tracker\transit_data.db"
 
 # Create or connect to the SQLite database on disk
 conn = sqlite3.connect(db_file)

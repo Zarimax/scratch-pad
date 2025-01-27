@@ -4,7 +4,7 @@ number_of_pages = 22
 imagelist = []
 
 for i in range(1, number_of_pages + 1):
-    image_path = f"C:\\Users\\Black Beast\\Desktop\\signed_mortgage\\p{i}.png"
+    image_path = f"C:\\Users\\Black Beast\\Desktop\\p{i}.png"
     print(f"... adding {image_path}")
     image = Image.open(image_path)
     imagelist.append(image.convert('RGB'))
