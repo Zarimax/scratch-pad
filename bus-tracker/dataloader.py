@@ -16,7 +16,7 @@ class Dataloader(Base):
     def full_refresh(self):
         conn = sqlite3.connect(self.db_file)
 
-        # TODO - need caching on MatchingTrips
+        # setup each table. the order here is important.
         setup_list = [Metadata, Stops, StopTimes, MatchingTrips]
         for table in setup_list:
             self.logger.info(f"Dataloader - setting up table {table}")

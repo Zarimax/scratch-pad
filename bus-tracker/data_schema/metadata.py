@@ -12,6 +12,8 @@ class Metadata(Database):
         )
         """
 
+        self.index_sql_list = []
+
         self.insert_sql = None  # specified in load_table
 
         super().__init__(config, conn)

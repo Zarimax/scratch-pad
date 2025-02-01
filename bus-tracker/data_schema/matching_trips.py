@@ -21,6 +21,8 @@ class MatchingTrips(Database):
         )
         """
 
+        self.index_sql_list = []
+
         self.insert_sql = """
         INSERT INTO matching_trips
         SELECT st3.*

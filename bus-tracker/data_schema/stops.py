@@ -18,8 +18,13 @@ class Stops(Database):
             wheelchair_boarding INTEGER,
             platform_code TEXT,
             zone_id TEXT
-        )
+        ) 
         """
+
+        self.index_sql_list = [
+            "CREATE INDEX IF NOT EXISTS idx_stops_stop_id ON stops(stop_id)",
+            "CREATE INDEX IF NOT EXISTS idx_stops_stop_name ON stops(stop_name)",
+        ]
 
         self.insert_sql = """
         INSERT INTO stops (

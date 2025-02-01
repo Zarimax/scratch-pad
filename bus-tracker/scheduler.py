@@ -3,6 +3,7 @@ from display import Display
 from downloader import Downloader
 from dataloader import Dataloader
 from tracker import Tracker
+import time
 
 class Scheduler(Base):
     def __init__(self, config):
@@ -25,7 +26,7 @@ class Scheduler(Base):
             --> WAKE
             --> RECOVER
         """
-        self.logger.info("Scheduler - entering state SLEEP")
+        self.logger.info("Scheduler - in state SLEEP")
         try:
             self.display.turn_off()
             # TODO - WAIT for wake up time
@@ -40,7 +41,7 @@ class Scheduler(Base):
             --> RUN
             --> RECOVER
         """
-        self.logger.info("Scheduler - entering state WAKE")
+        self.logger.info("Scheduler - in state WAKE")
         try:
             self.display.turn_on()
             self.downloader.get_full_data()
@@ -57,7 +58,7 @@ class Scheduler(Base):
             --> SLEEP
             --> RECOVER
         """
-        self.logger.info("Scheduler - entering state RUN")
+        self.logger.info("Scheduler - in state RUN")
         try:
             feed = self.downloader.get_realtime_data()
             trip_id_list = self.dataloader.get_trip_id_list()
@@ -68,6 +69,7 @@ class Scheduler(Base):
             #self.state = self.state_sleep
             # else, remain in the run state
             # TODO - WAIT
+            time.sleep(5)
         except Exception as e:
             self.exception = e
             self.state = self.state_recover
@@ -80,10 +82,12 @@ class Scheduler(Base):
             Verify DB
             --> WAKE
         """
-        self.logger.info("Scheduler - entering state RECOVER")
+        self.logger.info("Scheduler - in state RECOVER")
         if self.exception:
             self.logger.error(str(self.exception))
         
         # TODO - recovery steps
         # TODO - track recovery loop count
+        # TODO - WAIT
+        time.sleep(5)
         self.state = self.state_wake

@@ -15,6 +15,8 @@ class Database:
 
     def create(self):
         self.cursor.execute(self.create_sql)
+        for index_sql in self.index_sql_list:
+            self.cursor.execute(index_sql)
 
     def drop_and_insert(self):
         self.drop()
